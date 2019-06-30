@@ -3,7 +3,7 @@
     "GOOGLE_ANALYTICS": "GA_GOES_HERE",
     "NODE_ENV": "production"
   },
-  "alias": "DOMAIN_GOES_HERE",
+  "alias": "jorgeepc.dev",
   "scale": {
     "sfo1": {
       "min": 1,

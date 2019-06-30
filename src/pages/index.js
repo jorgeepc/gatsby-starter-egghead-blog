@@ -36,7 +36,7 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Your blog says the things you want to say.
+          Hi, I'm Jorge Padilla.
         </h1>
       </Container>
       <div
