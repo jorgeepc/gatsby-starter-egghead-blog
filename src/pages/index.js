@@ -7,6 +7,8 @@ import Link from 'components/Link'
 import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
+import { bpMaxMD } from '../lib/breakpoints'
+import image from '../../static/images/home.svg'
 
 const Hero = () => {
   const theme = useTheme()
@@ -16,28 +18,56 @@ const Hero = () => {
         color: ${theme.colors.white};
         width: 100%;
         background: ${theme.colors.primary};
-        padding: 20px 0 30px 0;
+        background-image: linear-gradient(270deg, #13547a 0%, #80d0c7 100%);
+        background-position: center right, center left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 0px 0 30px 0;
         display: flex;
       `}
     >
       <Container
         css={css`
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          ${bpMaxMD} {
+            flex-direction: column;
+            align-items: center;
+          }
         `}
       >
-        <h1
+        <div
           css={css`
-            color: ${theme.colors.white};
-            position: relative;
-            z-index: 5;
-            line-height: 1.5;
-            margin: 0;
-            max-width: ${rhythm(15)};
+            flex: 1;
           `}
         >
-          Hi, I'm Jorge Padilla.
-        </h1>
+          <h1
+            css={css`
+              color: ${theme.colors.white};
+              position: relative;
+              z-index: 5;
+              line-height: 1.5;
+              margin: 0;
+              max-width: ${rhythm(15)};
+              padding: 20px 0px;
+            `}
+          >
+            Hi, I'm Jorge Padilla.
+          </h1>
+        </div>
+        <div
+          css={css`
+            flex: 1;
+          `}
+        >
+          <img
+            src={image}
+            alt="Jorge Padilla"
+            css={{ maxWidth: '100%', marginBottom: 0 }}
+          />
+        </div>
       </Container>
       <div
         css={css`

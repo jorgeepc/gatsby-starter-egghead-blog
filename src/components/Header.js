@@ -11,11 +11,17 @@ const Header = ({ siteTitle }) => {
   return (
     <header
       css={css`
+        /* position: absolute; */
         width: 100%;
         flex-shrink: 0;
-        background: none;
         padding: 20px 0;
         background: ${theme.colors.headerBg};
+        background-image: ${theme.themeName === 'default'
+          ? 'linear-gradient(270deg, #13547a 0%, #80d0c7 100%)'
+          : 'none'};
+        background-position: center right, center left;
+        background-repeat: no-repeat;
+        background-size: contain;
       `}
     >
       <Container noVerticalPadding>
@@ -48,25 +54,36 @@ const Header = ({ siteTitle }) => {
               align-items: center;
               a {
                 text-decoration: none;
+                color: ${theme.colors.white};
+                padding: 8px 10px;
+                border-radius: 3px;
                 & + a {
-                  margin-left: 32px;
+                  margin-left: 10px;
+                }
+                &:hover,
+                &:focus {
+                  background: rgba(19, 84, 122, 0.7);
                 }
               }
               .active {
-                display: none;
-                visibility: hidden;
+                background: rgba(19, 84, 122, 0.9);
               }
             `}
           >
-            {/*
-          <Link
-            to="/blog"
-            activeClassName="active"
-            aria-label="View blog page"
-          >
-            Blog
-          </Link>
-          */}
+            <Link
+              to="/blog"
+              activeClassName="active"
+              aria-label="View blog page"
+            >
+              Blog
+            </Link>
+            <Link
+              to="/about"
+              activeClassName="active"
+              aria-label="View about page"
+            >
+              About
+            </Link>
             <ThemeToggler
               css={{}}
               toggleTheme={theme.toggleTheme}
