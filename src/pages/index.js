@@ -52,9 +52,11 @@ const Hero = () => {
               margin: 0;
               max-width: ${rhythm(15)};
               padding: 20px 0px;
+              font-size: 1.5rem;
             `}
           >
-            Hi, I'm Jorge Padilla.
+            Hi, I'm Jorge Padilla. I'm an ambitious software engineer,
+            passionate about web technology.
           </h1>
         </div>
         <div
@@ -87,7 +89,7 @@ const Description = styled.p`
 export default function Index({ data: { site, allMdx } }) {
   const theme = useTheme()
   return (
-    <Layout site={site}>
+    <Layout site={site} noSubscribeForm>
       <Hero />
       <Container
         css={css`
