@@ -6,10 +6,10 @@ module.exports = {
   siteUrl: 'https://jorgeepc.dev', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
-  siteDescription: 'This is where they post things!',
+  siteDescription: 'The personal website of Jorge Padilla - Software Engineer',
   minibio: `
-    <strong>Jorge Padilla</strong> is a Javascript Software Engineer.
-    He lives with his wife and four dogs in Cuenca - Ecuador.
+    <strong>Jorge Padilla</strong> is a Software Engineer based in Cuenca,
+    Ecuador with industry experience building web and mobile applications.
   `,
   author: 'Jorge Padilla', // Author for schemaORGJSONLD
   organization: 'Almendra',
