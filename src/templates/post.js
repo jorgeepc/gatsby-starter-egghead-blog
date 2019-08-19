@@ -22,7 +22,11 @@ export default function Post({
 
   return (
     <Layout site={site} frontmatter={mdx.frontmatter} noSubscribeForm>
-      <SEO frontmatter={mdx.frontmatter} isBlogPost />
+      <SEO
+        frontmatter={mdx.frontmatter}
+        postImage={banner.childImageSharp.fluid.src}
+        isBlogPost
+      />
       <article
         css={css`
           width: 100%;
@@ -98,6 +102,7 @@ export const pageQuery = graphql`
     mdx(fields: { id: { eq: $id } }) {
       frontmatter {
         title
+        description
         date(formatString: "MMMM DD, YYYY")
         author
         banner {
