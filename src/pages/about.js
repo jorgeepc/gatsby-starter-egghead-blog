@@ -7,7 +7,12 @@ export default ({ data: { site } }) => {
   return (
     <Layout site={site} noSubscribeForm>
       <Container>
-        <h2>!Hola! I'm Jorge Padilla 👋</h2>
+        <h2>
+          ¡Hola! I'm Jorge Padilla{' '}
+          <span role="img" aria-label="hi">
+            👋
+          </span>
+        </h2>
         <p>
           I am a Software Engineer based in Cuenca, Ecuador with industry
           experience building web and mobile applications. I currently focus on
